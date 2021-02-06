@@ -6,6 +6,12 @@ const Ficha = require('./models/ficha');
 const passport = require('passport');
 const session = require('express-session');
 
+//Autenticação obrigatória para acessar outras páginas
+function authenticationMiddleware(req, res, next) {
+    if (req.isAuthenticated()) return next();
+    res.redirect('/login?fail=true');
+}
+
 //Autenticação com passport
 require('./auth')(passport);
 app.use(session({
@@ -51,15 +57,15 @@ app.post('/login',
     })
 );
 
-app.get('/novaficha', function(req, res) {
+app.get('/novaficha', authenticationMiddleware, function(req, res) {
     res.render('novaficha');
 });
 
-app.get('/deleteficha', function(req, res) {
+app.get('/deleteficha', authenticationMiddleware, function(req, res) {
     res.render('deleteficha');
 });
 
-app.get('/consultar', function(req, res) {
+app.get('/consultar', authenticationMiddleware, function(req, res) {
     Ficha.findAll({
         order: [
             ['data_proced', 'Desc'],
@@ -70,22 +76,22 @@ app.get('/consultar', function(req, res) {
     })
 });
 
-app.get('/calendario', function(req, res) {
+app.get('/calendario', authenticationMiddleware, function(req, res) {
     res.render('calendario');
 });
 
-app.get('/relatorios', function(req, res) {
+app.get('/relatorios', authenticationMiddleware, function(req, res) {
     res.render('relatorios');
 });
 
-app.get('/ajuda', function(req, res) {
+app.get('/ajuda', authenticationMiddleware, function(req, res) {
     res.render('ajuda');
 });
-app.get('/index', function(rew, res) {
+app.get('/index', authenticationMiddleware, function(rew, res) {
     res.render('index');
 });
 
-app.get('/deleteficha/:id_ficha', function(req, res) {
+app.get('/deleteficha/:id_ficha', authenticationMiddleware, function(req, res) {
     Ficha.destroy({ where: { 'id_ficha': req.params.id_ficha } }).catch(function(erro) {
         res.send("DADOS INSERIDOS INVÁLIDOS.<br><br>" + "Retorne para página e tente novamente.<br><br>" + "Erro: <br><br>" + erro)
     }).then(function() {
@@ -95,12 +101,12 @@ app.get('/deleteficha/:id_ficha', function(req, res) {
     })
 })
 
-app.get('/editarficha', function(rew, res) {
+app.get('/editarficha', authenticationMiddleware, function(rew, res) {
     res.render('editarficha');
 });
 
 //Cadastrando Nova Ficha
-app.post('/cadnovaficha', function(req, res) {
+app.post('/cadnovaficha', authenticationMiddleware, function(req, res) {
     Ficha.create({
         nome_cliente: req.body.nome_cliente,
         telefone_cliente: req.body.telefone_cliente,
@@ -154,23 +160,11 @@ app.post('/cadnovaficha', function(req, res) {
     })
 })
 
-//Atualizando Ficha
-app.post('/updateficha/:idficha', function(req, res) {
-            Ficha.update(({ where: { 'id_ficha': req.params.id_ficha } }).catch(function(erro) {
-                    res.send("DADOS INSERIDOS INVÁLIDOS.<br><br>" + "Retorne para página e tente novamente.<br><br>" + "Erro: <br><br>" + erro)
-                }).then(function() {
-                    return res.redirect('index');
-                }).catch(function(erro) {
-                    res.send("Esta ficha não existe!" + erro)
-                })
-            })
 
 
 
 
-
-
-        //Inicialização da Aplicação
-        app.listen(8085, function() {
-            console.log("Aplicação Iniciada com Sucesso!")
-        });
+//Inicialização da Aplicação
+app.listen(8085, function() {
+    console.log("Aplicação Iniciada com Sucesso!")
+});
