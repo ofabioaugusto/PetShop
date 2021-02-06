@@ -1,2 +1,2 @@
-*.handlebars linguist-language=Python
-*.css linguist-language=Python
+*.handlebars linguist-language=JavaScript
+*.css linguist-language=JavaScript
