@@ -1,0 +1,488 @@
+<center><br>
+    <h1>
+        <font color='#0595a6'>Ficha de Cadastro</font>
+    </h1><br>
+    <h2>
+        <font color='red'>Preencha o formulário abaixo para agendar o banho e/ou tosa do animal.</font>
+    </h2>
+</center><br>
+
+<form action="/cadnovaficha" method="POST">
+
+    <!-- DADOS PESSOAIS-->
+    <div id="text_preenc">
+        <font color="red">* Preenchimento Obrigatório</font>
+    </div>
+    <fieldset>
+        <h4>
+            <font>Dados Pessoais</font>
+        </h4><br>
+        <table>
+            <tr>
+                <td width='220px'>
+                    <label>Nome do Cliente<font color="red">*</font>: </label>
+                </td>
+                <td>
+                    <input type="text" name="nome_cliente" size="50">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Telefone do Cliente<font color="red">*</font>: </label>
+                </td>
+                <td>
+                    <input type="text" name="telefone_cliente" size="50">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Nome do PET<font color="red">*</font>: </label>
+                </td>
+                <td>
+                    <input type="text" name="nome_pet" size="50">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Cor da Pelagem<font color="red">*</font>: </label>
+                </td>
+                <td>
+                    <input type="text" name="cor_pelagem" size="50">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Espécie do PET<font color="red">*</font>: </label>
+                </td>
+                <td>
+                    <select name="especie_pet">
+                        <option value="Cachorro">Cachorro</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Gado">Gado</option>
+                        <option value="Ave">Ave</option>
+                        <option value="Réptil">Réptil</option>
+                        <option value="Roedor">Roedor</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Nascimento do PET: </label>
+                </td>
+                <td>
+                    <input type="date" name="data_nasc_pet">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Cadastro do PET<font color="red">*</font>: </label>
+                </td>
+                <td>
+                    <input type="text" name="cad_pet">
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <!-- DATA DO PROCEDIMENTO-->
+        <h4>
+            <font>Data do Procedimento</font>
+        </h4><br>
+        <table>
+            <tr>
+                <td width='220px'>
+                    <label>Data do Procedimento<font color="red">*</font>: </label>
+                </td>
+                <td>
+                    <input type="date" name="data_proced">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Hora do Procedimento<font color="red">*</font>: </label>
+                </td>
+                <td>
+                    <input type="time" name="hora_proced">
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <!-- PROCEDIMENTOS A SEREM REALIZADOS-->
+        <h4>
+            <font>Procedimentos Solicitados</font>
+        </h4><br>
+        <table>
+            <tr>
+                <td width='220px'>
+                    <label>Banho: </label>
+                </td>
+                <td>
+                    <input type="radio" name="proced_banho" value="Sim"> Sim
+                    <input type="radio" name="proced_banho" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Tosa: </label>
+                </td>
+                <td>
+                    <input type="radio" name="proced_tosa" value="Sim"> Sim
+                    <input type="radio" name="proced_tosa" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Banho Tosa Higiênica: </label>
+                </td>
+                <td>
+                    <input type="radio" name="proced_banho_th" value="Sim"> Sim
+                    <input type="radio" name="proced_banho_th" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Banho Tosa Geral: </label>
+                </td>
+                <td>
+                    <input type="radio" name="proced_tosa_g" value="Sim"> Sim
+                    <input type="radio" name="proced_tosa_g" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Banho Tosa Tesoura: </label>
+                </td>
+                <td>
+                    <input type="radio" name="proced_tosa_t" value="Sim"> Sim
+                    <input type="radio" name="proced_tosa_t" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Escovação de Dentes: </label>
+                </td>
+                <td>
+                    <input type="radio" name="proced_escov" value="Sim"> Sim
+                    <input type="radio" name="proced_escov" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Hidratação: </label>
+                </td>
+                <td>
+                    <input type="radio" name="proced_hid" value="Sim"> Sim
+                    <input type="radio" name="proced_hid" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Outros: </label>
+                </td>
+                <td>
+                    <input type="text" name="proced_outros" size="50" value="N/A">
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <!-- TIPO DE PELAGEM DO PET-->
+        <h4>
+            <font>Tipo de Pelagem do PET</font>
+        </h4><br>
+        <table>
+            <tr>
+                <td width='220px'>
+                    <label>Pulgas: </label>
+                </td>
+                <td>
+                    <input type="radio" name="pelag_pulgas" value="Sim"> Sim
+                    <input type="radio" name="pelag_pulgas" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Carrapatos: </label>
+                </td>
+                <td>
+                    <input type="radio" name="pelag_carrapato" value="Sim"> Sim
+                    <input type="radio" name="pelag_carrapato" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Nós: </label>
+                </td>
+                <td>
+                    <input type="radio" name="pelag_nos" value="Sim"> Sim
+                    <input type="radio" name="pelag_nos" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Desembolo: </label>
+                </td>
+                <td>
+                    <input type="radio" name="pelag_desembolo" value="Sim"> Sim
+                    <input type="radio" name="pelag_desembolo" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Verrugas: </label>
+                </td>
+                <td>
+                    <input type="radio" name="pelag_verrugas" value="Sim"> Sim
+                    <input type="radio" name="pelag_verrugas" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Manchas: </label>
+                </td>
+                <td>
+                    <input type="radio" name="pelag_manchas" value="Sim"> Sim
+                    <input type="radio" name="pelag_manchas" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Machucados: </label>
+                </td>
+                <td>
+                    <input type="radio" name="pelag_machucado" value="Sim"> Sim
+                    <input type="radio" name="pelag_machucado" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Otite: </label>
+                </td>
+                <td>
+                    <input type="radio" name="pelag_otite" value="Sim"> Sim
+                    <input type="radio" name="pelag_otite" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Secreções Genitais: </label>
+                </td>
+                <td>
+                    <input type="radio" name="pelag_sec_genital" value="Sim"> Sim
+                    <input type="radio" name="pelag_sec_genital" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Outros: </label>
+                </td>
+                <td>
+                    <input type="text" name="pelag_outros" size="50" value="N/A">
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <!-- OBJETOS ENTREGUES-->
+        <h4>
+            <font>Objetos Entregues</font>
+        </h4><br>
+        <table>
+            <tr>
+                <td width='220px'>
+                    <label>Coleira: </label>
+                </td>
+                <td>
+                    <input type="radio" name="obj_coleira" value="Sim"> Sim
+                    <input type="radio" name="obj_coleira" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Guia: </label>
+                </td>
+                <td>
+                    <input type="radio" name="obj_guia" value="Sim"> Sim
+                    <input type="radio" name="obj_guia" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Enforcador: </label>
+                </td>
+                <td>
+                    <input type="radio" name="obj_enforc" value="Sim"> Sim
+                    <input type="radio" name="obj_enforc" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Escova de Dentes: </label>
+                </td>
+                <td>
+                    <input type="radio" name="obj_escova" value="Sim"> Sim
+                    <input type="radio" name="obj_escova" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Pasta de Dentes: </label>
+                </td>
+                <td>
+                    <input type="radio" name="obj_pasta" value="Sim"> Sim
+                    <input type="radio" name="obj_pasta" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Shampoo Medicamentoso: </label>
+                </td>
+                <td>
+                    <input type="radio" name="obj_shamp" value="Sim"> Sim
+                    <input type="radio" name="obj_shamp" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Outros: </label>
+                </td>
+                <td>
+                    <input type="text" name="obj_outros" size="50" value="N/A">
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <!-- PÓS BANHO-->
+        <h4>
+            <font>Pós Banho</font>
+        </h4><br>
+        <table>
+            <tr>
+                <td width='220px'>
+                    <label>Adereços: </label>
+                </td>
+                <td>
+                    <input type="radio" name="pos_b_adereco" value="Sim"> Sim
+                    <input type="radio" name="pos_b_adereco" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Acessórios: </label>
+                </td>
+                <td>
+                    <input type="radio" name="pos_b_acessorio" value="Sim"> Sim
+                    <input type="radio" name="pos_b_acessorio" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Perfume: </label>
+                </td>
+                <td>
+                    <input type="radio" name="pos_b_perfume" value="Sim"> Sim
+                    <input type="radio" name="pos_b_perfume" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Outros: </label>
+                </td>
+                <td>
+                    <input type="text" name="pos_b_outros" size="50" value="N/A">
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <!-- SAUDE DO PET-->
+        <h4>
+            <font>Saúde do PET</font>
+        </h4><br>
+        <table>
+            <tr>
+                <td width='220px'>
+                    <label>Cardiopata: </label>
+                </td>
+                <td>
+                    <input type="radio" name="saude_cardiopatia" value="Sim"> Sim
+                    <input type="radio" name="saude_cardiopatia" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Epilético: </label>
+                </td>
+                <td>
+                    <input type="radio" name="saude_epiletico" value="Sim"> Sim
+                    <input type="radio" name="saude_epiletico" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Mobilidade Reduzida: </label>
+                </td>
+                <td>
+                    <input type="radio" name="saude_mob_red" value="Sim"> Sim
+                    <input type="radio" name="saude_mob_red" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Necessita Acompanhamento: </label>
+                </td>
+                <td>
+                    <input type="radio" name="saude_nec_acomp" value="Sim"> Sim
+                    <input type="radio" name="saude_nec_acomp" value="Não"> Não
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Outros: </label>
+                </td>
+                <td>
+                    <input type="text" name="saude_outros" size="50" value="N/A">
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <table>
+            <tr>
+                <td width='220px'>
+                    <label>Outras Informações do PET: </label>
+                </td>
+                <td>
+                    <input type="text" name="outras_inf_pet" size="50" value="N/A">
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <input type="submit" value="Enviar" id="enviar">
+        <input type="reset" value="Limpar" id="limpar">
+    </fieldset>
+    <br><br><br><br><br><br><br><br>

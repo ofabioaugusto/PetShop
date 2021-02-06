@@ -1,0 +1,269 @@
+<center><br>
+    <h1>
+        <font color='#0595a6'>Consulta de Agendamentos</font>
+    </h1><br>
+    <h2>
+        <font color='red'>Abaixo estão todos os agendamentos realizados no Sistema.</font>
+    </h2>
+</center><br>
+
+{{#each conficha}}
+<div id="result">
+    <form action="/updateficha/{{dataValues.id_ficha}}" method="POST">
+        <label>Procedimento Finalizado:</label>
+        <input type="radio" name="proced_realizado" value="Sim"> Sim
+        <input type="radio" name="proced_realizado" value="Não"> Não
+        <input type="submit" value="Salvar" id="salvar">
+
+    </form>
+</div>
+<table class="result_consult">
+    <tr>
+        <td colspan="2" bgcolor="#F0FFF0">
+            <center><b>DADOS PESSOAIS</b></center>
+        </td>
+        <td><b>Verrugas:</b></td>
+        <td>
+            <center>{{dataValues.pelag_verrugas}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>ID do Agendamento:</b></td>
+        <td>
+            <center>{{dataValues.id_ficha}}</center>
+        </td>
+        <td width='250px'><b>Machucado:</b></td>
+        <td width='250px'>
+            <center>{{dataValues.pelag_machucado}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td width='250px'><b>Nome do Cliente:</b></td>
+        <td width='250px'>
+            <center>{{dataValues.nome_cliente}}</center>
+        </td>
+        <td width='250px'><b>Otite:</b></td>
+        <td width='250px'>
+            <center>{{dataValues.pelag_otite}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td width='250px'><b>Telefone do Cliente:</b></td>
+        <td width='250px'>
+            <center>{{dataValues.telefone_cliente}}</center>
+        </td>
+        <td width='250px'><b>Secreções Genitais:</b></td>
+        <td width='250px'>
+            <center>{{dataValues.pelag_sec_genital}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Nome do PET:</b></td>
+        <td>
+            <center>{{dataValues.nome_pet}}</center>
+        </td>
+        <td><b>Outros:</b></td>
+        <td>
+            <center>{{dataValues.pelag_outros}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Cor da Pelagem:</b></td>
+        <td>
+            <center>{{dataValues.cor_pelagem}}</center>
+        </td>
+        <td colspan="2" bgcolor="#F0FFF0">
+            <center><b>OBJETOS ENTREGUES</b></center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Espécie do PET:</b></td>
+        <td>
+            <center>{{dataValues.especie_pet}}</center>
+        </td>
+        <td><b>Coleira:</b></td>
+        <td>
+            <center>{{dataValues.obj_coleira}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Data Nasc. PET:</b></td>
+        <td>
+            <center>{{dataValues.data_nasc_pet}}</center>
+        </td>
+        <td><b>Guia:</b></td>
+        <td>
+            <center>{{dataValues.obj_guia}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Cadastro do PET:</b></td>
+        <td>
+            <center>{{dataValues.cad_pet}}</center>
+        </td>
+        <td><b>Enforcador:</b></td>
+        <td>
+            <center>{{dataValues.obj_enforc}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" bgcolor="#F0FFF0">
+            <center><b>DATA DO PROCEDIMENTO</b></center>
+        </td>
+        <td><b>Escova de Dentes:</b></td>
+        <td>
+            <center>{{dataValues.obj_escova}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Data/Hora do Procedimento:</b></td>
+        <td>
+            <center>{{dataValues.data_proced}} / {{dataValues.hora_proced}}</center>
+        </td>
+        <td><b>Pasta de Dentes:</b></td>
+        <td>
+            <center>{{dataValues.obj_pasta}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" bgcolor="#F0FFF0">
+            <center><b>PROCEDIMENTOS SOLICITADOS</b></center>
+        </td>
+        <td><b>Shampoo Medicamentoso:</b></td>
+        <td>
+            <center>{{dataValues.obj_shamp}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Banho:</b></td>
+        <td>
+            <center>{{dataValues.proced_banho}}</center>
+        </td>
+        <td><b>Outros:</b></td>
+        <td>
+            <center>{{dataValues.obj_outros}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Tosa:</b></td>
+        <td>
+            <center>{{dataValues.proced_tosa}}</center>
+        </td>
+        <td colspan="2" bgcolor="#F0FFF0">
+            <center><b>PÓS-BANHO</b></center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Banho e Tosa Higiênica:</b></td>
+        <td>
+            <center>{{dataValues.proced_banho_th}}</center>
+        </td>
+        <td><b>Adereços:</b></td>
+        <td>
+            <center>{{dataValues.pos_b_adereco}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Banho e Tosa Geral:</b></td>
+        <td>
+            <center>{{dataValues.proced_tosa_g}}</center>
+        </td>
+        <td><b>Acessórios:</b></td>
+        <td>
+            <center>{{dataValues.pos_b_acessorio}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Banho e Tosa Tesoura:</b></td>
+        <td>
+            <center>{{dataValues.proced_tosa_t}}</center>
+        </td>
+        <td><b>Perfume:</b></td>
+        <td>
+            <center>{{dataValues.pos_b_perfume}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Escovação de Dentes:</b></td>
+        <td>
+            <center>{{dataValues.proced_escov}}</center>
+        </td>
+        <td><b>Outros:</b></td>
+        <td>
+            <center>{{dataValues.pos_b_outros}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Hidratação:</b></td>
+        <td>
+            <center>{{dataValues.proced_hid}}</center>
+        </td>
+        <td colspan="2" bgcolor="#F0FFF0">
+            <center><b>SAÚDE DO PET</b></center>
+        </td>
+    </tr>
+    <td><b>Outros:</b></td>
+    <td>
+        <center>{{dataValues.proced_outros}}</center>
+    </td>
+    <td><b>Cardiopata:</b></td>
+    <td>
+        <center>{{dataValues.saude_cardiopatia}}</center>
+    </td>
+    </tr>
+    <tr>
+    <tr>
+        <td colspan="2" bgcolor="#F0FFF0">
+            <center><b>TIPO DE PELAGEM DO PET</b></center>
+        </td>
+        <td><b>Epilético:</b></td>
+        <td>
+            <center>{{dataValues.saude_epiletico}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Pulgas:</b></td>
+        <td>
+            <center>{{dataValues.pelag_pulgas}}</center>
+        </td>
+        <td><b>Mobilidade Reduzida:</b></td>
+        <td>
+            <center>{{dataValues.saude_mob_red}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Carrapatos:</b></td>
+        <td>
+            <center>{{dataValues.pelag_carrapato}}</center>
+        </td>
+        <td><b>Necessita Acompanhamento:</b></td>
+        <td>
+            <center>{{dataValues.saude_nec_acomp}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Nós:</b></td>
+        <td>
+            <center>{{dataValues.pelag_nos}}</center>
+        </td>
+        <td><b>Outros:</b></td>
+        <td>
+            <center>{{dataValues.saude_outros}}</center>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Desembolo:</b></td>
+        <td>
+            <center>{{dataValues.pelag_desembolo}}</center>
+        </td>
+        <td><b>Informações Gerais do PET:</b></td>
+        <td>
+            <center>{{dataValues.outras_inf_pet}}</center>
+        </td>
+    </tr>
+</table><br>
+
+
+
+<br><br><br><br>
+{{/each}}

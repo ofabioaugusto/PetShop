@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pet Shop</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/views/css/style.css'>
+    <script src='/views/locales/pt-br.js'></script>
+    <link href='/views/css/main.min.css' rel='stylesheet' />
+    <script src='/views/js/main.min.js' rel='stylesheet'></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                locale: 'pt-br',
+                contentHeight: 385,
+                initialView: 'dayGridMonth',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,listWeek'
+                }
+            });
+            calendar.render();
+        });
+    </script>
+    
+</head>
+
+<body bgcolor="#FFFFFF">
+    <header class="header">
+        <div id="container-topo">
+            <div id="right-topo">
+                <div id="right-topo-sub">
+                    Authentication:<br>
+                    USUARIO <br>
+                </div>
+            </div>
+            <div id="center-topo">
+                <div id="center-topo-sub">
+                    <script language=javascript type="text/javascript">
+                        dayName = new Array("Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado")
+                        monName = new Array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+                        now = new Date
+                    </script>
+                    </head>
+
+                    <body>
+                        <script language=javascript type="text/javascript">
+                            document.write("<marquee><h5> Bem vindo! Hoje é " + dayName[now.getDay()] + ", " + now.getDate() + " de " + monName[now.getMonth()] + " de " + now.getFullYear() + " </h5></marquee>")
+                        </script>
+                </div>
+            </div>
+            <div id="left-topo">
+                <a href="/index"><img src="/views/img/logo.jpg" id="logo"></a>
+            </div>
+        </div><br>
+        <input type="checkbox" id="bt_menu">
+        <label for="bt_menu">&#9776;</label>
+
+        <nav class="menu">
+            <ul>
+                <li>
+                    <b> <a href="/index">Início</a></b>
+                </li>
+                <li>
+                    <b><a href="#">Ficha</a></b>
+                    <ul>
+                        <li><b><a href="novaficha">Nova Ficha</a></b></li>
+                        <li><b><a href="editarficha">Editar Ficha</a></b></li>
+                        <li><b><a href="deleteficha">Deletar Ficha</a></b></li>
+                    </ul>
+                </li>
+                <li>
+                    <b> <a href="consultar">Consultar</a></b>
+                </li>
+                <li>
+                    <b> <a href="calendario">Calendário</a></b>
+                </li>
+                <li>
+                    <b> <a href="relatorios">Relatórios</a></b>
+                </li>
+                <li>
+                    <b> <a href="ajuda">Ajuda</a></b>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+
+
+
+        {{{body}}}
+
+
+
+    </main>
+    <footer class="footer">
+        <br>
+        Copyright © 2021 - Todos os direitos são reservados. <br>
+        Desenvolvido por Fabio Augusto <br>
+        E-mail: f.augusto@live.com<br>
+        <br>
+    </footer>
+</body>
+
+</html>

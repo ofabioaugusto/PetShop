@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tbl</title>
+</head>
+
+<body>
+    <table border="2">
+        <tr>
+            <td colspan="2" bgcolor="#F0FFF0">
+                <center><b>DADOS PESSOAIS</b></center>
+            </td>
+            <td><b>Verrugas:</b></td>
+            <td>{{dataValues.pelag_verrugas}}</td>
+        </tr>
+        <tr>
+            <td><b>ID do Agendamento:</b></td>
+            <td>{{dataValues.id_ficha}}</td>
+            <td width='250px'><b>Machucado:</b></td>
+            <td width='250px'>{{dataValues.pelag_machucado}}</td>
+        </tr>
+        <tr>
+            <td width='250px'><b>Nome do Cliente:</b></td>
+            <td width='250px'>{{dataValues.nome_cliente}}</td>
+            <td width='250px'><b>Otite:</b></td>
+            <td width='250px'>{{dataValues.pelag_otite}}</td>
+        </tr>
+        <tr>
+            <td width='250px'><b>Telefone do Cliente:</b></td>
+            <td width='250px'>{{dataValues.telefone_cliente}}</td>
+            <td width='250px'><b>Secreções Genitais:</b></td>
+            <td width='250px'>{{dataValues.pelag_sec_genital}}</td>
+        </tr>
+        <tr>
+            <td><b>Nome do PET:</b></td>
+            <td>{{dataValues.nome_pet}}</td>
+            <td><b>Outros:</b></td>
+            <td>{{dataValues.pelag_outros}}</td>
+        </tr>
+        <tr>
+            <td><b>Cor da Pelagem:</b></td>
+            <td>{{dataValues.cor_pelagem}}</td>
+            <td colspan="2" bgcolor="#F0FFF0">
+                <center><b>OBJETOS ENTREGUES</b></center>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Espécie do PET:</b></td>
+            <td>{{dataValues.especie_pet}}</td>
+            <td><b>Coleira:</b></td>
+            <td>{{dataValues.obj_coleira}}</td>
+        </tr>
+        <tr>
+            <td><b>Data Nasc. PET:</b></td>
+            <td>{{dataValues.data_nasc_pet}}</td>
+            <td><b>Guia:</b></td>
+            <td>{{dataValues.obj_guia}}</td>
+        </tr>
+        <tr>
+            <td><b>Cadastro do PET:</b></td>
+            <td>{{dataValues.cad_pet}}</td>
+            <td><b>Enforcador:</b></td>
+            <td>{{dataValues.obj_enforc}}</td>
+        </tr>
+        <tr>
+            <td colspan="2" bgcolor="#F0FFF0">
+                <center><b>DATA DO PROCEDIMENTO</b></center>
+            </td>
+            <td><b>Escova de Dentes:</b></td>
+            <td>{{dataValues.obj_escova}}</td>
+        </tr>
+        <tr>
+            <td><b>Data/Hora do Procedimento:</b></td>
+            <td>{{dataValues.data_proced}} / {{dataValues.hora_proced}}</td>
+            <td><b>Pasta de Dentes:</b></td>
+            <td>{{dataValues.obj_pasta}}</td>
+        </tr>
+        <tr>
+            <td colspan="2" bgcolor="#F0FFF0">
+                <center><b>PROCEDIMENTOS SOLICITADOS</b></center>
+            </td>
+            <td><b>Shampoo Medicamentoso:</b></td>
+            <td>{{dataValues.obj_shamp}}</td>
+        </tr>
+        <tr>
+            <td><b>Banho:</b></td>
+            <td>{{dataValues.proced_banho}}</td>
+            <td><b>Outros:</b></td>
+            <td>{{dataValues.obj_outros}}</td>
+        </tr>
+        <tr>
+            <td><b>Tosa:</b></td>
+            <td>{{dataValues.proced_tosa}}</td>
+            <td colspan="2" bgcolor="#F0FFF0">
+                <center><b>PÓS-BANHO</b></center>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Banho e Tosa Higiênica:</b></td>
+            <td>{{dataValues.proced_banho_th}}</td>
+            <td><b>Adereços:</b></td>
+            <td>{{dataValues.pos_b_adereco}}</td>
+        </tr>
+        <tr>
+            <td><b>Banho e Tosa Geral:</b></td>
+            <td>{{dataValues.proced_tosa_g}}</td>
+            <td><b>Acessórios:</b></td>
+            <td>{{dataValues.pos_b_acessorio}}</td>
+        </tr>
+        <tr>
+            <td><b>Banho e Tosa Tesoura:</b></td>
+            <td>{{dataValues.proced_tosa_t}}</td>
+            <td><b>Perfume:</b></td>
+            <td>{{dataValues.pos_b_perfume}}</td>
+        </tr>
+        <tr>
+            <td><b>Escovação de Dentes:</b></td>
+            <td>{{dataValues.proced_escov}}</td>
+            <td><b>Outros:</b></td>
+            <td>{{dataValues.pos_b_outros}}</td>
+        </tr>
+        <tr>
+            <td><b>Hidratação:</b></td>
+            <td>{{dataValues.proced_hid}}</td>
+            <td colspan="2" bgcolor="#F0FFF0">
+                <center><b>SAÚDE DO PET</b></center>
+            </td>
+        </tr>
+        <td><b>Outros:</b></td>
+        <td>{{dataValues.proced_outros}}</td>
+        <td><b>Cardiopata:</b></td>
+        <td>{{dataValues.saude_cardiopatia}}</td>
+        </tr>
+        <tr>
+            <tr>
+                <td colspan="2" bgcolor="#F0FFF0">
+                    <center><b>TIPO DE PELAGEM DO PET</b></center>
+                </td>
+                <td><b>Epilético:</b></td>
+                <td>{{dataValues.saude_epiletico}}</td>
+            </tr>
+            <tr>
+                <td><b>Pulgas:</b></td>
+                <td>{{dataValues.pelag_pulgas}}</td>
+                <td><b>Mobilidade Reduzida:</b></td>
+                <td>{{dataValues.saude_mob_red}}</td>
+            </tr>
+            <tr>
+                <td><b>Carrapatos:</b></td>
+                <td>{{dataValues.pelag_carrapato}}</td>
+                <td><b>Necessita Acompanhamento:</b></td>
+                <td>{{dataValues.saude_nec_acomp}}</td>
+            </tr>
+            <tr>
+                <td><b>Nós:</b></td>
+                <td>{{dataValues.pelag_nos}}</td>
+                <td><b>Outros:</b></td>
+                <td>{{dataValues.saude_outros}}</td>
+            </tr>
+            <tr>
+                <td><b>Desembolo:</b></td>
+                <td>{{dataValues.pelag_desembolo}}</td>
+                <td><b>Informações Gerais do PET:</b></td>
+                <td>{{dataValues.outras_inf_pet}}</td>
+            </tr>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
