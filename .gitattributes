@@ -1,2 +1,2 @@
-*.handlebars linguist-language=JavaScript
-*.css linguist-language=JavaScript
+*.handlebars linguist-language= JavaScript
+*.css linguist-language= JavaScript
