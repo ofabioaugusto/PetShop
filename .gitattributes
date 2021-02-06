@@ -1,4 +1,4 @@
 * linguist-vendored
 *.handlebars linguist-vendored=false
 
-*.javascript linguist-detectable=true
+*.js linguist-detectable=true
