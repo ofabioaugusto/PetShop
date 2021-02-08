@@ -91,15 +91,16 @@ app.get('/index', authenticationMiddleware, function(rew, res) {
     res.render('index');
 });
 
-app.get('/deleteficha/:id_ficha', authenticationMiddleware, function(req, res) {
-    Ficha.destroy({ where: { 'id_ficha': req.params.id_ficha } }).catch(function(erro) {
-        res.send("DADOS INSERIDOS INVÁLIDOS.<br><br>" + "Retorne para página e tente novamente.<br><br>" + "Erro: <br><br>" + erro)
+app.post('/del', authenticationMiddleware, (req, res) => {
+    Ficha.destroy({ where: { 'id_ficha': req.body.id_ficha } }).catch(function(erro) {
+        res.render('deleteficha', { message: 'DADOS INSERIDOS INVÁLIDOS!' });
     }).then(function() {
-        return res.redirect('index');
+        res.render('deleteficha', { message: 'Ficha excluida com sucesso!' });
     }).catch(function(erro) {
-        res.send("Esta ficha não existe!" + erro)
+        res.render('deleteficha', { message: 'Esta ficha não existe!' });
     })
 })
+
 
 app.get('/editarficha', authenticationMiddleware, function(rew, res) {
     res.render('editarficha');

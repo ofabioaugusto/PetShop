@@ -126,11 +126,32 @@ label[for='bt_menu'] {
     display: none;
 }
 
+#btn_logoff {
+    background: #0595a6;
+    color: white;
+    border-style: outset;
+    border-color: #0595a6;
+    height: 32px;
+    width: 60px;
+    text-align: center;
+    font: bold 15px arial, sans-serif;
+}
+
 label[for='bt_menu'] {
     display: none;
 }
 
 @media(max-width: 800px) {
+    #btn_logoff {
+        background: #0595a6;
+        color: white;
+        border-style: outset;
+        border-color: #0595a6;
+        height: 22px;
+        width: 40px;
+        text-align: center;
+        font: bold 12px arial, sans-serif;
+    }
     .footer {
         position: fixed;
         bottom: 0;

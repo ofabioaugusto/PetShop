@@ -1,21 +1,22 @@
-    <center><br>
-    <h1>
-        <font color='#0595a6'>Excluir Ficha</font>
-    </h1><br>
-    <h2>
-        <font color='red'>Informe o ID da ficha e clique em Deletar para excluir a ficha permanentemente do sistema.</font>
-    </h2>
-<br><br>
-    <form action="/deleteficha/{{dataValues.id_ficha}}" method="GET">
-      <table>
-        <tr>
-          <td><label>ID: </label></td>
-          <td><input name="id_ficha" value="{{dataValues.id_ficha}}" type="text"></td>
-        <tr>
-        <tr>
-          <td></td>
-          <td><input type="submit" value="Deletar"></td>
-        </tr>
-      </table>
-    </form>
-    </center>
+<center><br>
+  <h1>
+    <font color='#0595a6'>Excluir Ficha</font>
+  </h1><br>
+  <h2>
+    <font color='red'>Informe o ID da ficha e clique em Deletar para excluir a ficha permanentemente do sistema.</font>
+  </h2>
+  <br><br>
+  <form action="/del" method="POST">
+    <table>
+      <tr>
+        <td><label>ID: </label></td>
+        <td><input name="id_ficha" value="{{dataValues.id_ficha}}" type="text"></td>
+      <tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" value="Deletar"></td>
+      </tr>
+    </table>
+  </form><br><br>
+  <font color="red"><b>{{message}}</b></font>
+</center>
