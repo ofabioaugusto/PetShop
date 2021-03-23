@@ -49,35 +49,27 @@ const Ficha = db.sequelize.define('tbl_ficha', {
 
     proced_realizado: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     proced_tosa: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     proced_banho: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     proced_banho_th: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     proced_tosa_g: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     proced_tosa_t: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     proced_escov: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     proced_hid: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     proced_outros: {
         type: db.Sequelize.TEXT,
@@ -85,39 +77,30 @@ const Ficha = db.sequelize.define('tbl_ficha', {
     },
     pelag_pulgas: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     pelag_carrapato: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     pelag_nos: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     pelag_desembolo: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     pelag_verrugas: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     pelag_manchas: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     pelag_machucado: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     pelag_otite: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     pelag_sec_genital: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     pelag_outros: {
         type: db.Sequelize.TEXT,
@@ -125,27 +108,21 @@ const Ficha = db.sequelize.define('tbl_ficha', {
     },
     obj_coleira: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     obj_guia: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     obj_enforc: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     obj_escova: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     obj_pasta: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     obj_shamp: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     obj_outros: {
         type: db.Sequelize.TEXT,
@@ -153,15 +130,12 @@ const Ficha = db.sequelize.define('tbl_ficha', {
     },
     pos_b_adereco: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     pos_b_acessorio: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     pos_b_perfume: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     pos_b_outros: {
         type: db.Sequelize.TEXT,
@@ -169,19 +143,15 @@ const Ficha = db.sequelize.define('tbl_ficha', {
     },
     saude_cardiopatia: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     saude_epiletico: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     saude_mob_red: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     saude_nec_acomp: {
         type: db.Sequelize.ENUM('Sim', 'Não'),
-        defaultValue: 'Não'
     },
     saude_outros: {
         type: db.Sequelize.TEXT,

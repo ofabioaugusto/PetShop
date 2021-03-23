@@ -5,13 +5,13 @@
     <h2>
         <font color='red'>Preencha o formulário abaixo para agendar o banho e/ou tosa do animal.</font>
     </h2>
-</center><br>
-
+</center><br><br>
 <form action="/cadnovaficha" method="POST">
 
     <!-- DADOS PESSOAIS-->
     <div id="text_preenc">
-        <font color="red">* Preenchimento Obrigatório</font>
+        <font color="red">* Preenchimento Obrigatório</font><br><br>
+        <font color="red"><b>{{message}}</b></font>
     </div>
     <fieldset>
         <h4>
@@ -186,7 +186,7 @@
                     <label>Outros: </label>
                 </td>
                 <td>
-                    <input type="text" name="proced_outros" size="50" value="N/A">
+                    <input type="text" name="proced_outros" size="50" value="">
                 </td>
             </tr>
         </table>
@@ -291,7 +291,7 @@
                     <label>Outros: </label>
                 </td>
                 <td>
-                    <input type="text" name="pelag_outros" size="50" value="N/A">
+                    <input type="text" name="pelag_outros" size="50" value="">
                 </td>
             </tr>
         </table>
@@ -366,7 +366,7 @@
                     <label>Outros: </label>
                 </td>
                 <td>
-                    <input type="text" name="obj_outros" size="50" value="N/A">
+                    <input type="text" name="obj_outros" size="50" value="">
                 </td>
             </tr>
         </table>
@@ -411,7 +411,7 @@
                     <label>Outros: </label>
                 </td>
                 <td>
-                    <input type="text" name="pos_b_outros" size="50" value="N/A">
+                    <input type="text" name="pos_b_outros" size="50" value="">
                 </td>
             </tr>
         </table>
@@ -466,7 +466,7 @@
                     <label>Outros: </label>
                 </td>
                 <td>
-                    <input type="text" name="saude_outros" size="50" value="N/A">
+                    <input type="text" name="saude_outros" size="50" value="">
                 </td>
             </tr>
         </table>
@@ -477,7 +477,7 @@
                     <label>Outras Informações do PET: </label>
                 </td>
                 <td>
-                    <input type="text" name="outras_inf_pet" size="50" value="N/A">
+                    <input type="text" name="outras_inf_pet" size="50" value="">
                 </td>
             </tr>
         </table>

@@ -57,15 +57,19 @@ app.post('/login',
     })
 );
 
-app.get('/novaficha', authenticationMiddleware, function(req, res) {
+app.get('/novaficha', authenticationMiddleware, (req, res) => {
     res.render('novaficha');
 });
 
-app.get('/deleteficha', authenticationMiddleware, function(req, res) {
+app.get('/logoff', authenticationMiddleware, (req, res) => {
+    res.redirect('/login?fail=true')
+});
+
+app.get('/deleteficha', authenticationMiddleware, (req, res) => {
     res.render('deleteficha');
 });
 
-app.get('/consultar', authenticationMiddleware, function(req, res) {
+app.get('/consultar', authenticationMiddleware, (req, res) => {
     Ficha.findAll({
         order: [
             ['data_proced', 'Desc'],
@@ -76,18 +80,18 @@ app.get('/consultar', authenticationMiddleware, function(req, res) {
     })
 });
 
-app.get('/calendario', authenticationMiddleware, function(req, res) {
+app.get('/calendario', authenticationMiddleware, (req, res) => {
     res.render('calendario');
 });
 
-app.get('/relatorios', authenticationMiddleware, function(req, res) {
+app.get('/relatorios', authenticationMiddleware, (req, res) => {
     res.render('relatorios');
 });
 
-app.get('/ajuda', authenticationMiddleware, function(req, res) {
+app.get('/ajuda', authenticationMiddleware, (req, res) => {
     res.render('ajuda');
 });
-app.get('/index', authenticationMiddleware, function(rew, res) {
+app.get('/index', authenticationMiddleware, (req, res) => {
     res.render('index');
 });
 
@@ -102,12 +106,12 @@ app.post('/del', authenticationMiddleware, (req, res) => {
 })
 
 
-app.get('/editarficha', authenticationMiddleware, function(rew, res) {
+app.get('/editarficha', authenticationMiddleware, (req, res) => {
     res.render('editarficha');
 });
 
 //Cadastrando Nova Ficha
-app.post('/cadnovaficha', authenticationMiddleware, function(req, res) {
+app.post('/cadnovaficha', authenticationMiddleware, (req, res) => {
     Ficha.create({
         nome_cliente: req.body.nome_cliente,
         telefone_cliente: req.body.telefone_cliente,
@@ -155,9 +159,9 @@ app.post('/cadnovaficha', authenticationMiddleware, function(req, res) {
         saude_outros: req.body.saude_outros,
         outras_inf_pet: req.body.outras_inf_pet
     }).then(function() {
-        return res.redirect('index');
+        res.render('novaficha', { message: 'Ficha salva com sucesso!' });
     }).catch(function(erro) {
-        res.send("DADOS INSERIDOS INVÁLIDOS.<br><br>" + "Retorne para página e tente novamente.<br><br>" + "houve um erro: <br><br>" + erro)
+        res.render('novaficha', { message: 'DADOS INSERIDOS INVÁLIDOS!' });
     })
 })
 
@@ -167,5 +171,5 @@ app.post('/cadnovaficha', authenticationMiddleware, function(req, res) {
 
 //Inicialização da Aplicação
 app.listen(8085, function() {
-    console.log("Aplicação Iniciada com Sucesso!")
+    console.log("Aplicação Iniciada com Sucesso...")
 });
