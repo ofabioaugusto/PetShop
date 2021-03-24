@@ -170,6 +170,6 @@ app.post('/cadnovaficha', authenticationMiddleware, (req, res) => {
 
 
 //Inicialização da Aplicação
-app.listen(8085, function() {
+app.listen(process.env.PORT || 8085, function() {
     console.log("Aplicação Iniciada com Sucesso...")
 });
